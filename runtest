@@ -1,0 +1,17 @@
+#! /bin/bash
+# run pytest in the poetry shell
+
+while [ $# -gt 0 ]; do
+  if [ "$1" == "help" ]; then
+    printf "$0"" Running pytest with arguments:
+
+    no-conn        Skip online tests: test_conn.py \n"
+    exit
+  
+  elif [ "$1" == "no-conn" ]; then
+    arg="--ignore=tests/test_conn.py"
+  fi
+  shift
+done
+
+poetry run python -m pytest "$arg"
