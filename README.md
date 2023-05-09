@@ -11,8 +11,9 @@ using at the time.
 ## Filters
 
 Think of the following syntax:
-    If <header> <compares_to> <target>, then <action> the
-    message, to optional <destination>.
+
+If \<header> \<compares-to> \<target>,  
+then \<action> the message, with optional \<destination>.
 
 ## Configuration
 
